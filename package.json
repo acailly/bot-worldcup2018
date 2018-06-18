@@ -1,0 +1,9 @@
+{
+  "name": "bot-worldcup2018",
+  "version": "1.0.0",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cross-env": "5.0.5",
+    "request": "^2.87.0"
+  }
+}
