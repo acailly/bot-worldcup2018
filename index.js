@@ -22,9 +22,12 @@ module.exports = function (vorpal) {
           const awayTeam = match.away_team.country
           const awayGoals = match.away_team.goals
 
+          const dateTime = new Date(match.datetime)
+          const matchTime = `${dateTime.getHours()}:${dateTime.getMinutes()}`
+
           const status = match.status
           const color = status === 'completed' ? chalk.green : status === 'in progress' ? chalk.yellow : chalk.gray
-          const message = `${homeTeam} ${homeGoals} - ${awayTeam} ${awayGoals}`
+          const message = `${matchTime}\t ${homeTeam} ${homeGoals} - ${awayTeam} ${awayGoals}`
 
           return color(message)
         }).join('\n')
